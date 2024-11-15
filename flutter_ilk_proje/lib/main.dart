@@ -12,31 +12,31 @@ class FirstApp extends StatelessWidget {
     return MaterialApp(
       theme: ThemeData(
         appBarTheme: const AppBarTheme(color: Colors.teal),
-        scaffoldBackgroundColor: Colors.grey[100],
       ),
       home: Scaffold(
-        appBar: AppBar(
-          title: const Text("AppBar"),
-        ),
-        floatingActionButton: FloatingActionButton(
-          onPressed: () {
-            debugPrint("Tıklandı");
-          },
-          backgroundColor: Colors.red,
-          child: const Icon(
-            Icons.access_time,
-            color: Colors.cyan,
+          backgroundColor: Colors.yellow,
+          appBar: AppBar(
+            title: const Text("AppBar"),
           ),
-        ),
-        body: const Text(
-          "Hello Word",
-          style: TextStyle(
-            color: Colors.red,
-            fontSize: 24,
-            fontWeight: FontWeight.w500,
+          floatingActionButton: FloatingActionButton(
+            onPressed: () {
+              debugPrint("Tıklandı");
+            },
+            backgroundColor: Colors.red,
+            child: const Icon(
+              Icons.access_time,
+              color: Colors.cyan,
+            ),
           ),
-        ),
-      ),
+          body: Container(
+            color: Colors.purple,
+            // child: Text(
+            //   "Ali" * 2,
+            //   textAlign: TextAlign.center,
+            // ),
+            constraints: BoxConstraints(
+                minHeight: 100, minWidth: 100, maxHeight: 200, maxWidth: 200),
+          )),
     );
   }
 }
