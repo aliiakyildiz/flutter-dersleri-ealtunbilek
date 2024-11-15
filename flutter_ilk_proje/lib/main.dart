@@ -14,29 +14,35 @@ class FirstApp extends StatelessWidget {
         appBarTheme: const AppBarTheme(color: Colors.teal),
       ),
       home: Scaffold(
-          backgroundColor: Colors.yellow,
-          appBar: AppBar(
-            title: const Text("AppBar"),
+        appBar: AppBar(
+          title: const Text("AppBar"),
+        ),
+        floatingActionButton: FloatingActionButton(
+          onPressed: () {
+            debugPrint("Tıklandı");
+          },
+          backgroundColor: Colors.red,
+          child: const Icon(
+            Icons.access_time,
+            color: Colors.cyan,
           ),
-          floatingActionButton: FloatingActionButton(
-            onPressed: () {
-              debugPrint("Tıklandı");
-            },
-            backgroundColor: Colors.red,
-            child: const Icon(
-              Icons.access_time,
-              color: Colors.cyan,
+        ),
+        body: Center(
+          child: Container(
+            width: 100,
+            height: 100,
+            color: Colors.red,
+            child: Container(
+              alignment: Alignment.center,
+              color: Colors.blue,
+              margin: EdgeInsets.all(10),
+              width: 50,
+              height: 50,
+              child: Text("Ali"),
             ),
           ),
-          body: Container(
-            color: Colors.purple,
-            // child: Text(
-            //   "Ali" * 2,
-            //   textAlign: TextAlign.center,
-            // ),
-            constraints: BoxConstraints(
-                minHeight: 100, minWidth: 100, maxHeight: 200, maxWidth: 200),
-          )),
+        ),
+      ),
     );
   }
 }
