@@ -28,18 +28,13 @@ class FirstApp extends StatelessWidget {
           ),
         ),
         body: Center(
+          widthFactor: 3,
+          heightFactor: 3,
           child: Container(
             width: 100,
             height: 100,
             color: Colors.red,
-            child: Container(
-              alignment: Alignment.center,
-              color: Colors.blue,
-              margin: EdgeInsets.all(10),
-              width: 50,
-              height: 50,
-              child: Text("Ali"),
-            ),
+            child: Text("Ali"),
           ),
         ),
       ),
