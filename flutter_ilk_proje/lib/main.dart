@@ -30,40 +30,78 @@ class FirstApp extends StatelessWidget {
             color: Colors.cyan,
           ),
         ),
-        body: Center(
-          child: Container(
-            padding: EdgeInsets.all(20),
-            child: Text(
-              "Ali",
-              style: TextStyle(
-                fontSize: 128,
+        body: Container(
+          color: Colors.red.shade300,
+          child: const Column(
+            mainAxisSize: MainAxisSize.max,
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: <Widget>[
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                mainAxisSize: MainAxisSize.max,
+                children: [
+                  Text("A"),
+                  Text("L"),
+                  Text("İ"),
+                ],
               ),
-            ),
-            decoration: BoxDecoration(
-                color: Colors.amber,
-                shape: BoxShape.rectangle,
-                border: Border.all(width: 4, color: Colors.blueGrey),
-                borderRadius: const BorderRadius.only(
-                  bottomLeft: Radius.circular(30),
-                  topRight: Radius.circular(30),
-                ),
-                image: DecorationImage(
-                  image: NetworkImage(_img1),
-                  fit: BoxFit.scaleDown,
-                  repeat: ImageRepeat.repeat,
-                ),
-                boxShadow: const [
-                  BoxShadow(
-                      color: Colors.grey,
-                      offset: Offset(0, 20),
-                      blurRadius: 10),
-                  BoxShadow(
-                      color: Colors.purple,
-                      offset: Offset(0, -20),
-                      blurRadius: 10),
-                ]),
+              Icon(
+                Icons.add_circle,
+                size: 64,
+                color: Colors.green,
+              ),
+              Icon(
+                Icons.add_circle,
+                size: 64,
+                color: Colors.blue,
+              ),
+              Icon(
+                Icons.add_circle,
+                size: 64,
+                color: Colors.black,
+              ),
+              Icon(
+                Icons.add_circle,
+                size: 64,
+                color: Colors.deepOrange,
+              ),
+            ],
           ),
         ),
+      ),
+    );
+  }
+
+  Center containerDersleri() {
+    return Center(
+      child: Container(
+        padding: EdgeInsets.all(20),
+        child: Text(
+          "Ali",
+          style: TextStyle(
+            fontSize: 128,
+          ),
+        ),
+        decoration: BoxDecoration(
+            color: Colors.amber,
+            shape: BoxShape.rectangle,
+            border: Border.all(width: 4, color: Colors.blueGrey),
+            borderRadius: const BorderRadius.only(
+              bottomLeft: Radius.circular(30),
+              topRight: Radius.circular(30),
+            ),
+            image: DecorationImage(
+              image: NetworkImage(_img1),
+              fit: BoxFit.scaleDown,
+              repeat: ImageRepeat.repeat,
+            ),
+            boxShadow: const [
+              BoxShadow(
+                  color: Colors.grey, offset: Offset(0, 20), blurRadius: 10),
+              BoxShadow(
+                  color: Colors.purple, offset: Offset(0, -20), blurRadius: 10),
+            ]),
       ),
     );
   }
