@@ -4,6 +4,9 @@ void main() {
   runApp(const FirstApp());
 }
 
+String _img1 =
+    'https://www.log.com.tr/wp-content/uploads/2021/06/rekor-fiyata-satilan-nissan-skyline-gt-r-r34-midnight-purple-ii-9.jpg';
+
 class FirstApp extends StatelessWidget {
   const FirstApp({super.key});
 
@@ -28,13 +31,37 @@ class FirstApp extends StatelessWidget {
           ),
         ),
         body: Center(
-          widthFactor: 3,
-          heightFactor: 3,
           child: Container(
-            width: 100,
-            height: 100,
-            color: Colors.red,
-            child: Text("Ali"),
+            padding: EdgeInsets.all(20),
+            child: Text(
+              "Ali",
+              style: TextStyle(
+                fontSize: 128,
+              ),
+            ),
+            decoration: BoxDecoration(
+                color: Colors.amber,
+                shape: BoxShape.rectangle,
+                border: Border.all(width: 4, color: Colors.blueGrey),
+                borderRadius: const BorderRadius.only(
+                  bottomLeft: Radius.circular(30),
+                  topRight: Radius.circular(30),
+                ),
+                image: DecorationImage(
+                  image: NetworkImage(_img1),
+                  fit: BoxFit.scaleDown,
+                  repeat: ImageRepeat.repeat,
+                ),
+                boxShadow: const [
+                  BoxShadow(
+                      color: Colors.grey,
+                      offset: Offset(0, 20),
+                      blurRadius: 10),
+                  BoxShadow(
+                      color: Colors.purple,
+                      offset: Offset(0, -20),
+                      blurRadius: 10),
+                ]),
           ),
         ),
       ),
