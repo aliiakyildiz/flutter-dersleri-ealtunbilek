@@ -31,46 +31,104 @@ class FirstApp extends StatelessWidget {
           ),
         ),
         body: Container(
-          color: Colors.red.shade300,
-          child: const Column(
-            mainAxisSize: MainAxisSize.max,
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: <Widget>[
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                mainAxisSize: MainAxisSize.max,
-                children: [
-                  Text("A"),
-                  Text("L"),
-                  Text("İ"),
-                ],
-              ),
-              Icon(
-                Icons.add_circle,
-                size: 64,
-                color: Colors.green,
-              ),
-              Icon(
-                Icons.add_circle,
-                size: 64,
-                color: Colors.blue,
-              ),
-              Icon(
-                Icons.add_circle,
-                size: 64,
-                color: Colors.black,
-              ),
-              Icon(
-                Icons.add_circle,
-                size: 64,
-                color: Colors.deepOrange,
-              ),
-            ],
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: flexableContainer,
           ),
         ),
       ),
     );
+  }
+
+  List<Widget> get flexableContainer {
+    return [
+      Flexible(
+        child: Container(
+          width: 100,
+          height: 300,
+          color: Colors.yellow,
+        ),
+      ),
+      Flexible(
+        child: Container(
+          width: 200,
+          height: 300,
+          color: Colors.red,
+        ),
+      ),
+    ];
+  }
+
+  List<Widget> get expandedContainer {
+    return [
+      Expanded(
+        flex: 2,
+        child: Container(
+          width: 75,
+          height: 75,
+          color: Colors.yellow,
+        ),
+      ),
+      Expanded(
+        flex: 2,
+        child: Container(
+          width: 75,
+          height: 75,
+          color: Colors.red,
+        ),
+      ),
+      Expanded(
+        flex: 2,
+        child: Container(
+          width: 75,
+          height: 75,
+          color: Colors.blue,
+        ),
+      ),
+      Expanded(
+        flex: 2,
+        child: Container(
+          width: 75,
+          height: 75,
+          color: Colors.orange,
+        ),
+      ),
+    ];
+  }
+
+  List<Widget> get sorunluContainer {
+    return [
+      Container(
+        width: 75,
+        height: 75,
+        color: Colors.yellow,
+      ),
+      Container(
+        width: 75,
+        height: 75,
+        color: Colors.red,
+      ),
+      Container(
+        width: 75,
+        height: 75,
+        color: Colors.blue,
+      ),
+      Container(
+        width: 75,
+        height: 75,
+        color: Colors.orange,
+      ),
+      Container(
+        width: 75,
+        height: 75,
+        color: Colors.blue,
+      ),
+      Container(
+        width: 75,
+        height: 75,
+        color: Colors.red,
+      ),
+    ];
   }
 
   Center containerDersleri() {
